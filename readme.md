@@ -6,5 +6,5 @@ git clone https://gitee.com/caibao111/douban-trailer.git
 npm install
 
 # Serve with hot reload at localhost:9528
-npm star
+npm start
 ```
