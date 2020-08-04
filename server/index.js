@@ -1,7 +1,7 @@
 /*
  * @Author: caist
  * @Date: 2020-08-04 16:04:20
- * @LastEditTime: 2020-08-04 16:09:02
+ * @LastEditTime: 2020-08-04 16:16:47
  * @LastEditors: Please set LastEditors
  * @Description: entry port
  * @FilePath: \douban-trailer\server\index.js
@@ -16,4 +16,4 @@ app.use(async (ctx, next) => {
   ctx.body = 'Hi Luke'
 })
 
-app.listen(4455)
+app.listen(4488)
