@@ -4,7 +4,8 @@
   "description": "a koa project",
   "main": "server/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server/index"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   "license": "ISC",
   "dependencies": {
     "koa": "^2.13.0",
-    "koa-logger": "^3.2.1"
+    "koa-logger": "^3.2.1",
+    "koa-views": "^6.3.0"
   }
 }
