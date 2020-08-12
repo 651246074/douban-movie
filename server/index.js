@@ -1,7 +1,7 @@
 /*
  * @Author: caist
  * @Date: 2020-08-04 16:04:20
- * @LastEditTime: 2020-08-05 10:22:53
+ * @LastEditTime: 2020-08-12 16:10:42
  * @LastEditors: Please set LastEditors
  * @Description: entry port
  * @FilePath: \douban-trailer\server\index.js
@@ -12,6 +12,7 @@ const views = require('koa-views')
 const pug = require('pug')
 const { resolve } = require('path')
 const { htmlTpl, pugTpl } = require('./tpl')
+const { connect } = require('./database/init.js')
 
 const app = new Koa()
 
@@ -41,6 +42,9 @@ app.use(async (ctx, next) => {
   })
 })
 
+;(async () => {
+  await connect()
+})()
 
 
 app.listen(4488)
