@@ -1,7 +1,7 @@
 /*
  * @Author: caist
  * @Date: 2020-08-14 09:17:50
- * @LastEditTime: 2020-08-14 09:23:24
+ * @LastEditTime: 2020-08-14 16:18:10
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \douban-trailer\server\database\schema\movie.js
@@ -9,9 +9,9 @@
 const mongoose = require('mongoose')
 
 const Schema = mongoose.Schema
-const Mixed = SCheme.Types.Mixed
+const Mixed = Schema.Types.Mixed
 
-const MovieScheme = new Scheme({
+const MovieSchema = new Schema({
   doubanId: String,
   rate: Number,
   title: String,
@@ -38,7 +38,7 @@ const MovieScheme = new Scheme({
   }
 })
 
-MovieScheme.pre('save', function (next) {
+MovieSchema.pre('save', function (next) {
   if (this.isNew) {
     this.meta.createdAt = this.meta.updatedAt = Date.now()
   }else {
@@ -48,4 +48,4 @@ MovieScheme.pre('save', function (next) {
   next()
 })
 
-mongoose.model('Movie', MovieScheme)
+mongoose.model('Movie', MovieSchema)

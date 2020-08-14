@@ -5,7 +5,7 @@
   "main": "server/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server/index"
+    "start": "nodemon ./start.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +18,8 @@
   "author": "caist",
   "license": "ISC",
   "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-polyfill": "^6.26.0",
     "koa": "^2.13.0",
     "koa-logger": "^3.2.1",
     "koa-views": "^6.3.0",

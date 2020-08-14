@@ -1,7 +1,7 @@
 /*
  * @Author: caist
  * @Date: 2020-08-12 15:46:03
- * @LastEditTime: 2020-08-12 16:11:32
+ * @LastEditTime: 2020-08-14 15:50:58
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \douban-trailer\server\database\init.js
@@ -30,7 +30,7 @@ exports.connect = () => {
 
   mongoose.connection.once('open', () => {
     const Dog = mongoose.model('Dog', {name: String})
-    const dog1 = new Dog({name: '小狗狗'})
+    const dog1 = new Dog({name: '小狗仔'})
 
     dog1.save().then(() => {
       console.log('wang')
